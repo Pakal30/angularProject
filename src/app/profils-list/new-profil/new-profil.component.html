@@ -1,0 +1,33 @@
+
+<div class="col-sm-8 col-sm-offset-2">
+  <form [formGroup]="profilForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <label for="name">Prénom</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="photo">Photo</label>
+      <input type="text" id="photo" class="form-control" formControlName="photo">
+    </div>
+    <div class="form-group">
+      <label for="proprio">Proprio</label>
+      <input type="text" id="proprio" class="form-control" formControlName="proprio">
+    </div>
+    <div class="form-group">
+      <label for="genre">genre</label>
+      <input type="text" id="genre" class="form-control" formControlName="genre">
+    </div>
+    <div class="form-group">
+      <label for="tel">Tel</label>
+      <input type="text" id="tel" class="form-control" formControlName="tel">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" class="form-control" formControlName="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
+</div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="add()">save</button>
+ 

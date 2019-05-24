@@ -1,0 +1,55 @@
+<div *ngIf="profil">
+
+
+
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{profil.photo}}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">{{profil.name}}</h4>
+          <p class="card-text">{{profil.description}}</p>
+          <a class="btn btn-primary" routerLink="/conversation/view/0/{{profil.id}}">Ecrire</a>          
+        </div>
+      </div>
+
+  <h2>{{profil.name | uppercase}} Caractéristique du profil</h2>
+  
+  <div>
+    <label>Photo:
+      <input [(ngModel)]="profil.photo" placeholder="photo"/>
+    </label>
+  </div>
+  
+  <div>
+    <label>nom:
+      <input [(ngModel)]="profil.name" placeholder="nom de la bête"/>
+    </label>
+  </div>
+  <div>
+    <label>proprio:
+      <input [(ngModel)]="profil.proprio" placeholder="nom proprio"/>
+    </label>
+  </div>
+  <div>
+    <label>genre:
+      <input [(ngModel)]="profil.genre" placeholder="male ou femelle"/>
+    </label>
+  </div>
+  <div>
+    <label>tel:
+      <input [(ngModel)]="profil.tel" placeholder="tel"/>
+    </label>
+  </div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="profil.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="profil.description" placeholder="description"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+  <a routerLink="conversation/view/{{profil.id}}">détails</a>
+</div>

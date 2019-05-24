@@ -1,0 +1,28 @@
+<div class="container">
+<h2>List Profils</h2>
+<div class="row">
+  <div class="col-sm-6">
+<ul class="profils">
+  <li *ngFor="let profil of petsProfilsMale">
+    <p>
+    <img height="200px" src={{profil.photo}} alt={{profil.name}}>
+    <span class="minProfil"> {{profil.name}}</span>
+    <a routerLink="view/{{profil.id}}">détails</a>
+    </p>
+  </li>
+</ul>
+</div>
+<div class="col-sm-6">
+<ul class="profils">
+    <li *ngFor="let profil of petsProfilsFemale">
+      <p>
+      <img height="200px" src={{profil.photo}} alt={{profil.name}}>
+      <span class="minProfil"> {{profil.name}}</span>
+      <a routerLink="view/{{profil.id}}">détails</a>
+      </p>
+    </li>
+  </ul>
+  </div>
+ </div>
+ </div>
+ 
